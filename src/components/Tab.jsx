@@ -10,7 +10,7 @@ const Tab = ({ tabs }) => {
             <div className='flex' >
 
                 {tabs.map((tab, index) =>
-                    <button key={index} className='p-1 m-2 bg-gray-300 text-black' onClick={() => { handleActiveTab(tab.id) }}>{tab?.label}</button>
+                    <button key={index} className={`p-1 m-2  text-black cursor-pointer ${ activeTab === tab.id ? 'bg-blue-400' : 'bg-gray-300'}`} onClick={() => { handleActiveTab(tab.id) }}>{tab?.label}</button>
                 )}
             </div>
 
